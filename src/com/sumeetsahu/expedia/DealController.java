@@ -85,8 +85,8 @@ public class DealController {
 		Deal deal = new Deal(sort, dealorder);
 		List<Hotel> hotels = deal.getHotelDeals(hotelsArray);
 		
-		if(end!=-1)
-			return hotels.subList(start, end);
+		//if(end!=-1)
+			//return hotels.subList(start, end);
 		return hotels;
 		
 	}

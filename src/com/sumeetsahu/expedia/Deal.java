@@ -12,7 +12,7 @@ public class Deal {
 	
 	public Deal(String sort, String dealorder) {
 		
-		deal = DealFactory.Create(sort,null);		
+		deal = DealFactory.Create(sort.toLowerCase(),null);		
 		
 		for (String dealItem : dealorder.split(",")) {
 			if(dealItem!=sort)

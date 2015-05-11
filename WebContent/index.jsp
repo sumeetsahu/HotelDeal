@@ -22,8 +22,7 @@ box-shadow:1px 2px 6px rgba(0,0,0,0.5);
 border-radius:15px;
 padding:15px 10px 15px 10px;
 text-align:center;
-     } 
-    
+     }     
 </style> 
 <script>
   $(function() {

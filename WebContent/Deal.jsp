@@ -107,7 +107,7 @@ table tr:hover td {
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Deal</title>
+<title>Best Hotel Deal</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -123,22 +123,10 @@ table tr:hover td {
     	    $("input[type=submit").click();
     	  }
     	});
-  });
-  </script>
-</head>
-<body>
-
-<div style="width:1200px; margin:0 auto;">
-<div style="width:800px; margin:0 auto;">
-<input type="text" style="height: 30px" size="60" align="middle" id="city" placeholder="Type and search a city to get best deal...."/>
-<input type="submit" value="Search Deal" id="search"/>
-</div>
-<table id="deal_table"></table>
-</div>
-
-<script type="text/javascript">
+	
 
 url = "API/deal"+location.search;
+
 var keys_map = { 
 		name : {IsEnabled:true,FriendlyName: "Hotel Name"} , 
 		streetAddress : {IsEnabled:true,FriendlyName: "Street Address"}, 
@@ -193,8 +181,22 @@ $.getJSON(url , function(data) {
     })
     
     $("#deal_table").html(tbl_body);
-});
+});	
+		
+		
+  });
+  </script>
+</head>
+<body>
 
-</script>
+<div style="width:1200px; margin:0 auto;">
+<div style="width:800px; margin:0 auto;">
+<input type="text" style="height: 30px" size="60" align="middle" id="city" placeholder="Type and search a city to get best deal...."/>
+<input type="submit" value="Search Deal" id="search"/>
+</div>
+<table id="deal_table"></table>
+</div>
+
+
 </body>
 </html>

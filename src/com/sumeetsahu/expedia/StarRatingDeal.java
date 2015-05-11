@@ -2,9 +2,9 @@ package com.sumeetsahu.expedia;
 
 import java.util.Comparator;
 
-public class StarDeal extends DealDecorator {
+public class StarRatingDeal extends DealDecorator {
 
-	public StarDeal(Comparator<Hotel> comparator) {
+	public StarRatingDeal(Comparator<Hotel> comparator) {
 		super(comparator);		
 	}
 

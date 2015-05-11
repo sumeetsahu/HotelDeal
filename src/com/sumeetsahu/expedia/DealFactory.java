@@ -18,9 +18,9 @@ public class DealFactory {
 		case "price": 
 			return new PriceDeal(deal);
 		case "guestrating": 
-			return new GuestDeal(deal);
+			return new GuestRatingDeal(deal);
 		case "starrating": 
-			return new StarDeal(deal);
+			return new StarRatingDeal(deal);
 		default:
 			break;
 		}

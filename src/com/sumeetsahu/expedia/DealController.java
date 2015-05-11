@@ -1,9 +1,6 @@
 package com.sumeetsahu.expedia;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
@@ -58,34 +55,5 @@ public class DealController {
 		
 	}
 	
-	
-	/**
-	 * 
-	 * getCities : returns list of cities available in API.
-	 * 
-	 * @return List of cities available with the API
-	 * @throws JsonSyntaxException
-	 * @throws Exception
-	 */
-	@Cacheable(value = "citiescache")
-	@RequestMapping(value = "/API/cities")
-	public @ResponseBody List<String> getCities() 
-			throws JsonSyntaxException, Exception{
-		
-		HashSet<String> cities = new HashSet<String>();
-
-		Hotel[] hotels = API.getHotels(dealapi);
-		
-		for (Hotel hotel : hotels) {
-			if(!cities.contains(hotel.getCity()))
-				cities.add(hotel.getCity());
-		}
-		
-		List<String> citiesList = new ArrayList<String>(cities);
-		Collections.sort(citiesList);
-		
-		return citiesList;
-		
-	}
 	
 }
